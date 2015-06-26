@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.althink.android.ossw.plugins.sample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SamplePluginSettingsActivity"
+            android:label="@string/plugin_name">
+            <intent-filter>
+                <action android:name="com.althink.android.ossw.plugins.sample.config" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".SamplePluginContentProvider"
+            android:authorities="com.althink.android.ossw.plugins.sample"
+            android:exported="true"
+            android:syncable="false"
+            android:enabled="true"
+            android:label="@string/plugin_name"
+            ><meta-data android:name="com.althink.android.ossw.plugin" android:value="true"></meta-data>
+        </provider>
+
+        <service
+            android:name=".SamplePluginService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.althink.android.ossw.plugins.sample" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OSSW sample plugin</string>
+    <string name="plugin_name">Sample</string>
+
+    <string name="property_intParam">Test integer param</string>
+    <string name="property_floatParam">Test float param</string>
+    <string name="property_stringParam">Test string param</string>
+    <string name="property_enumParam">Test enum param</string>
+    <string name="property_modParam">Test modifiable param</string>
+    <string name="function_increaseModParam">Increase modifiable param</string>
+    <string name="function_decreaseModParam">Decrease modifiable param</string>
+
+    <string name="pref_title_string_param">String parameter value</string>
+</resources>
