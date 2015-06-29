@@ -51,7 +51,6 @@ public class SamplePluginContentProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        Log.i(TAG, "Process: " + android.os.Process.myUid());
         return true;
     }
 
@@ -156,7 +155,7 @@ public class SamplePluginContentProvider extends ContentProvider {
                         Object newValue = values.get(key);
                         Object oldValue = this.values.get(key);
                         if ((oldValue == null && newValue != null) || (oldValue != null && !oldValue.equals(newValue))) {
-                            Log.i(TAG, "Update property '" + key + "' with value: " + newValue);
+                            //Log.i(TAG, "Update property '" + key + "' with value: " + newValue);
                             this.values.put(key, values.get(key));
                             hasChanged = true;
                         }
