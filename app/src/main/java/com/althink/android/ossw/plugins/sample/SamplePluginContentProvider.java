@@ -58,14 +58,12 @@ public class SamplePluginContentProvider extends ContentProvider {
     static final String API_COLUMN_NAME = "name";
     static final String API_COLUMN_DESCRIPTION = "description";
     static final String API_COLUMN_TYPE = "type";
-    static final String API_COLUMN_RANGE = "range";
 
     private static final String[] API_PROPERTY_COLUMNS = new String[]{
             API_COLUMN_ID,
             API_COLUMN_NAME,
             API_COLUMN_DESCRIPTION,
-            API_COLUMN_TYPE,
-            API_COLUMN_RANGE
+            API_COLUMN_TYPE
     };
 
     private static final String[] API_FUNCTION_COLUMNS = new String[]{
@@ -108,7 +106,7 @@ public class SamplePluginContentProvider extends ContentProvider {
     }
 
     private void addApiPropertyRow(MatrixCursor cursor, SamplePluginProperty property, int descriptionId) {
-        cursor.newRow().add(property.getId()).add(property.getName()).add(getString(descriptionId)).add(property.getType().name()).add(null);
+        cursor.newRow().add(property.getId()).add(property.getName()).add(getString(descriptionId)).add(property.getType().name());
     }
 
     private void addApiFunctionRow(MatrixCursor cursor, SamplePluginFunction function, int descriptionId) {

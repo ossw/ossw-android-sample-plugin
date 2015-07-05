@@ -92,7 +92,9 @@ public class SamplePluginService extends Service {
                 case DECREASE_MOD_PARAM: {
                     int value = getParamIntValue(SamplePluginProperty.MOD_PARAM);
 
-                    value--;
+                    if (value > 0) {
+                        value--;
+                    }
 
                     updateParamValue(SamplePluginProperty.MOD_PARAM, value);
                     break;
