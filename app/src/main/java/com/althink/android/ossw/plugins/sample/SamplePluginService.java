@@ -28,7 +28,7 @@ public class SamplePluginService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d(TAG, "onBind");
+        //Log.d(TAG, "onBind");
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String value = sharedPref.getString(SamplePluginSettingsActivity.STRING_PARAM_VALUE, "test");
@@ -42,7 +42,7 @@ public class SamplePluginService extends Service {
 
     @Override
     public boolean onUnbind(Intent intent) {
-        Log.d(TAG, "onUnbind");
+        //Log.d(TAG, "onUnbind");
         timer.cancel();
         timer = null;
 
